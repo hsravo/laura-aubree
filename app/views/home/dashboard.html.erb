@@ -1,31 +1,158 @@
-<h1>Home#dashboard</h1>
+<header id="dashboard-header">
 
-<p id="notice"><%= notice %></p>
+  <h1>Administrateur</h1>
 
-<h1>Publications</h1>
+  <ul style="display:inline">
+    <% if user_signed_in? %>
 
+      <li>
+        Utilisateur : <%= current_user.email %>
+      </li>
 
-  <div class="container">
-    <div class="row" id="publication-gallery">
-      <% @publications.each do |publication| %>
-        <%= publication.body %>
-        <div class="imgSlider gallery" id="img-column">
-          <%= link_to publication.image do %>
-            <% image_tag(publication.image, :style => "max-height:400px;max-width:400px") %>  
-          <% end %>
-        </div>
+      <% if current_user.role != 'admin' %>
+        <li>
+          ATTENTION : Vous n'êtes pas administrateur de ce site.
+        </li>
       <% end %>
+
+      <li>
+        <%= link_to "Modifier le compte", edit_user_registration_path, class: "header_link_dashboard" %>
+      </li>
+
+      <li>
+        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "header_link_dashboard" %>
+      </li>
+
+    <% end %>
+  </ul>
+
+</header>
+
+
+<% if current_user.role == 'admin' %>
+  <div class="container" style="padding-top:1px;padding-bottom:1px">
+    <% if flash[:success] %>
+    <div class="alert alert-success">
+      <%= flash[:success] %>
+    </div>
+    <% end %>
+
+    <% if flash[:danger] %>
+    <div class="alert alert-danger">
+      <%= flash[:danger] %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Projets')">Projets</button>
+    <button class="tablinks" onclick="openCity(event, 'Publications')">Publications</button>
+  </div>
+
+  <div id="Projets" class="tabcontent">
+    <div class="row" id="dashcontent">
+      <center><h3><i class="fas fa-list-alt"></i> Projets</h3></center>
+      <div class="container">
+        <div class="col-md-12" id="dash-button">
+          <div class="row">
+            <%= button_to  "Ajouter un projet", new_project_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
+          </div>
+        </div>
+        <div class="table-responsive" style="margin-top:25px">
+          <table class="table">
+            <thead class="">
+              <tr>
+                <th class="text-left"style="padding-right:75px">
+                  Image
+                </th>
+                <th class="text-center" style="padding-right:75px">
+                  Titre
+                </th>
+                <th class="text-center" style="padding-right:75px">
+                  Texte
+                </th>
+                <th class="text-center">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <% @projects.each do |project|%>
+                <td class="text-center"style="padding-right:75px">
+                  <%= image_tag(project.cover, class: "publication_thumbnail_dashboard") %></h2>
+                </td>
+                <td style="padding-right:75px">
+                  <%= project.title %></h2>
+                </td>
+                <td style="padding-right:75px">
+                  <%= project.body_fr %></h2>
+                </td>
+                <td class="text-center">
+                  <%= button_to "Voir", project_path(project), method: :get, class: "btn btn-dark btn-round", style:"margin-bottom:5px" %>
+                  <%= button_to "Modifier", edit_project_path(project), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
+                  <%= button_to "Supprimer", [project], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Supprimer ce projet ?' } %>
+                </td>
+              </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 
-<br>
-
-<% if user_signed_in? %>
-  <% if isAdmin? %>
-    <div class="row">                         
-      <div class="col-md-6 ml-auto mr-auto">
-        <%= button_to  "Ajouter une publication", new_publication_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
+  <div id="Publications" class="tabcontent">
+    <div class="col-md-12">
+      <div class="row" id="dashcontent">
+        <center><h3><i class="fas fa-list-alt"></i>  Publications</h3></center>
+        <div class="container">
+          <div class="col-md-12" id="dash-button">
+            <div class="row">
+              <%= button_to  "Ajouter une publication", new_publication_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
+            </div>
+          </div>
+          <div class="table-responsive" style="margin-top:25px">
+            <table class="table">
+              <thead class="">
+                <tr>
+                  <th class="text-left" style="padding-right:75px">
+                    Image
+                  </th>
+                  <th class="text-center" style="padding-right:90px">
+                    Titre
+                  </th>
+                  <th class="text-center" style="padding-right:90px">
+                    Description
+                  </th>
+                  <th class="text-center">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <% @publications.each do |publication|%>
+                  <td class="text-center" style="padding-right:75px">
+                    <%= image_tag(publication.image, class: "publication_thumbnail_dashboard") %></h2>
+                  </td>
+                  <td style="padding-right:90px">
+                    <%= publication.title %></h2>
+                  </td>
+                  <td style="padding-right:90px">
+                    <%= publication.body %></h2>
+                  </td>
+                  <td class="text-center">
+                    <%= button_to "Modifier", edit_publication_path(publication), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
+                    <%= button_to "Supprimer", [publication], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Supprimer cette publication ?' } %>
+                  </td>
+                </tr>
+                <%end%>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
-  <% end %>
+  </div>
 <% end %>

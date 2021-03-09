@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-    # @projects = Project.all
+    @projects = Project.all
     @publications = Publication.all
   end
 

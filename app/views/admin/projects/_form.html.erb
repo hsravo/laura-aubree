@@ -1,0 +1,64 @@
+<%= form_for @project, url: [@project], html: {class: 'form-horizontal'} do |form| %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <% if @project.errors.any? %>
+          <div class="alert alert-danger">
+            <ul>
+              <% @project.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= form.label :title, "Titre" %>
+              <%= form.text_field :title, class: 'form-control' %>
+            </div>
+
+
+
+            <div class="form-group">
+              <%= form.label :cover, "Photo principale" %>
+              <%= form.file_field :cover, class: 'form-control' %>
+              <% unless project.new_record? %>
+                <%= image_tag project.cover, :style => "width:100px;height:100px;" %>
+              <% end %>
+            </div>
+
+            <div class="form-group">
+              <%= form.label :images, "Images du projet" %>
+              <%= form.file_field :images, multiple: true, class: 'form-control' %>
+            </div>  
+                    
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= form.label :body_fr, "Texte (FR)" %>
+              <%= form.rich_text_area :body_fr, class: 'form-control', rows: 8 %>
+            </div>
+            <div class="form-group">
+              <%= form.label :body_en, "Texte (EN)" %>
+              <%= form.rich_text_area :body_en, class: 'form-control', rows: 8 %>
+            </div>         
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+        </div>
+
+        <div class="actions"  style="padding:20px">
+          <%= form.submit "Valider le projet", :class => "btn btn-lg btn-success" %>
+        </div>
+      </div>    
+    </div>
+  </div>
+<% end %>
