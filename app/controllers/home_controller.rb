@@ -5,7 +5,9 @@ class HomeController < ApplicationController
   def index
   end
 
-  def about
+  def dashboard
+    # @projects = Project.all
+    @publications = Publication.all
   end
 
   def admin
@@ -14,11 +16,5 @@ class HomeController < ApplicationController
         redirect_to dashboard_path
       end
     end
-  end
-
-  def contact
-  end
-
-  def dashboard
   end
 end
