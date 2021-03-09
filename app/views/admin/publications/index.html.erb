@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Publications</h1>
+
+
+  <div class="container">
+    <div class="row" id="publication-gallery">
+      <% @publications.each do |publication| %>
+        <div class="imgSlider gallery" id="img-column">
+          <%= link_to publication.image do %>
+            <% image_tag(publication.image) %>  
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<br>
+
+<% if user_signed_in? %>
+  <% if isAdmin? %>
+    <div class="row">                         
+      <div class="col-md-6 ml-auto mr-auto">
+        <%= button_to  "Ajouter une publication", new_publication_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<script>
+  window.onload = function() {
+    baguetteBox.run('.imgSlider', {
+      animation: 'fadeIn',
+      noScrollbars: true
+    });
+  };
+</script>
