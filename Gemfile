@@ -3,6 +3,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+gem 'devise'
+gem 'table_print'
+gem 'friendly_id'
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'dotenv-rails', groups: [:development, :test]
+gem "rubycritic", require: false
+gem "aws-sdk-s3", require: false
+
+# Use ActiveStorage variant
+gem 'mini_magick', '~> 4.8'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use postgresql as the database for Active Record
@@ -27,8 +40,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
+  gem 'letter_opener'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 4.0.0'
+  gem 'guard-rspec', require: false
+  gem 'factory_bot_rails'
 end
 
 group :development do

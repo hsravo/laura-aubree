@@ -1,0 +1,9 @@
+<p>Bonjour <%= @email %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+  <p>L'adresse mail liée à votre compte a bien été modifiée : <%= @resource.unconfirmed_email %>.</p>
+<% else %>
+  <p>L'adresse mail liée à votre compte a bien été modifiée : <%= @resource.email %>.</p>
+<% end %>
+
+<small>www.laura-aubree.fr</small>
