@@ -1,0 +1,32 @@
+<nav class="navbar" id="nav-desktop">
+  <div class="col">
+    <ul>
+      <li><i class="fa fa-bars" id="openNav" aria-hidden="true"></i></li>
+      <li><h5 id="principal"><%= link_to 'Laura Aubrée', root_path %></h5></li>
+      <li><a href="https://www.linkedin.com/in/laura-aubrée-27bb8a135" target="_blank"><i class="fab fa-linkedin-in" id="social"></a></i></li>
+      <li><a href="https://www.instagram.com/aubreelaura" target="_blank"><i class="fab fa-instagram" id="social"></a></i></li>
+      <% if user_signed_in? %>
+        <li><%= link_to dashboard_path do %>
+          <i class="fas fa-cog" id="social"></i></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>  
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+    <div class="overlay-content">
+
+      <%= link_to 'Laura Aubrée', root_path, class: 'nav-title' %>
+      <% if user_signed_in? %>
+        <% if isAdmin? %>
+          <%= link_to 'Administrateur', dashboard_path, class: 'nav-title' %>
+        <% end %>
+      <% end %>
+      <%= link_to 'Projects', projects_path, class: 'nav-title' %>
+      <%= link_to 'Publications', publications_path, class: 'nav-title' %>
+      <%= link_to 'About', about_path, class: 'nav-title' %>
+      <%= link_to 'Contact', contact_path, class: 'nav-title' %>
+    </div>
+  </div>
+</nav>

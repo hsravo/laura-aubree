@@ -1,3 +1,88 @@
-// Place all the styles related to the Publications controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+  font-family: 'PT Serif', serif;
+}
+
+@media (min-width: 800px) {
+
+  #publication-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    padding-bottom: 60px;
+    justify-content: center;
+  }
+
+  #img-column a {
+    text-decoration: none;
+  }
+
+  #img-column img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    flex: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    transition: 0.3s;
+  }
+
+  #img-column img:hover {
+    opacity: 0.5;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+
+
+  .header {
+    text-align: center;
+    padding-top: 32px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #publication-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  #img-column img {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    transition: 0.3s;
+  }
+
+  #img-column img:hover {
+    opacity: 0.5;
+  }
+
+}
+
+footer {
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: normal;
+  color: #212529;
+  padding: 240px 0 60px;
+  bottom: 0;
+  display:flex;
+  justify-content: center;
+  font-family: 'PT Serif', serif;
+}

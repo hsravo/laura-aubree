@@ -1,3 +1,582 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+/* HOME INDEX SLIDER */
+
+
+@media only screen and (max-width: 730px) {
+
+  #homeslider {
+    float:center;
+  }
+
+  .slider {
+    max-width: 400px;
+    height: 300px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
+  footer {
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: normal;
+    color: #212529;
+    padding: 190px 0 60px;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Serif', serif;
+  }
+
+}
+
+@media only screen and (min-width: 730px) and (max-width: 870px) {
+
+  #homeslider {
+    float:center;
+  }
+
+  .slider {
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
+  footer {
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: normal;
+    color: #212529;
+    padding: 190px 0 60px;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Serif', serif;
+  }
+
+}
+
+@media only screen and (min-width: 870px) {
+
+  #homeslider {
+    float:center;
+  }
+
+  .slider {
+    max-width: 700px;
+    height: 466px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
+
+  footer {
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: normal;
+    color: #212529;
+    padding: 350px 0 60px;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Serif', serif;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #homeslider {
+    float:center;
+    height:55vh;
+  }
+
+  .slider {
+    max-width: 1500px;
+    min-height: 700px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
+}
+
+.slide1,.slide2,.slide3,.slide4,.slide5, .slide6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url(/images/home/25520021-2.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade 36s infinite;
+-webkit-animation:fade 36s infinite;
+
+}
+.slide2 {
+  background: url(/images/home/Patagonia-019.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade2 36s infinite;
+-webkit-animation:fade2 36s infinite;
+}
+.slide3 {
+    background: url(/images/home/collodion184.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 36s infinite;
+-webkit-animation:fade3 36s infinite;
+}
+.slide4 {
+    background: url(/images/home/expo_revelat04.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 36s infinite;
+-webkit-animation:fade4 36s infinite;
+}
+.slide5 {
+    background: url(/images/home/julien_pola.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 36s infinite;
+-webkit-animation:fade5 36s infinite;
+}
+.slide6 {
+    background: url(/images/home/Argentina-019.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 36s infinite;
+-webkit-animation:fade6 36s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  16.667% { opacity: 1}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 1}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade4
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 1}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade5
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 1}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade6
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 1}
+  100% { opacity: 0}
+}
+
+/* ABOUT PAGE */
+
+body {
+  justify-content: center;
+}
+
+#description-field {
+  display:flex;
+}
+
+@media only screen and (min-width: 991px) {
+
+  #about-view {
+    max-height:45vh;
+    margin-top:10vh;
+  }
+
+  #image-field {
+    border-right:1px solid black;
+  }
+
+
+  #description-field {
+    overflow:scroll;
+    height:550px;
+  }
+
+  #description-field::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  #description-field::-webkit-scrollbar-track {
+    background: transparent;
+  }
+   
+  #description-field::-webkit-scrollbar-thumb {
+    background: #212529; 
+  }
+
+  #description-field li {
+    display: flex;
+    align-items: left;
+  }
+
+  .text-eng {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .text-resume {
+    font-size: 14px;
+    color: #212529;
+    text-align:justify;
+  }
+
+  .text-fr {
+    font-size: 14px;
+    font-style: oblique 10deg;
+    text-align: left;
+  }
+
+  .about-title {
+    font-size: 32px;
+    font-style: bold;
+    text-align: left;
+    font-family: 'PT Serif', serif;
+  }
+
+  .about-date {
+    font-size: 22px;
+    color: #212529;
+    text-align:justify;
+  }
+
+  #about-img {
+    margin: 0;
+    max-height:550px;
+    width: auto;
+    background-size: cover;
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.7;
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 990px) {
+
+
+  #description-field ul {
+    margin-right: 41px;
+    margin-bottom:-90px;
+  }
+
+  .about-title {
+    font-size: 24px;
+    font-style: bold;
+    text-align:center;
+    font-family: 'PT Serif', serif;
+  }
+
+  .about-date {
+    font-size: 22px;
+    color: #212529;
+    text-align:center;
+  }
+
+  #description-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin-top: 20px;
+  }
+
+  .text-eng {
+    font-size: 16px;
+  }
+
+  .text-fr {
+    font-size: 16px;
+    font-style: oblique 10deg;
+  }
+
+  .text-resume {
+    font-size: 16px;
+  }
+
+  #image-field {
+    margin-bottom:5vh;
+    #about-img {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      max-height: 450px;
+      width: auto;
+      background-size: cover;
+      &:hover {
+        transition: 0.3s;
+        opacity: 0.7;
+      }
+    }  
+  }
+
+
+}
+
+
+/* CONTACT PAGE */
+
+
+
+h1 {
+  font-family: 'PT Serif', serif;
+}
+
+#contact-field {
+  p {
+    font-size: 22px;
+  }
+
+  a {
+    transition:0.3s;
+  }
+
+  a:hover {
+    text-decoration:none;
+    color:#888a8c;
+  }
+}
+
+#contact-field a:hover {
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+#contact-icons {
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  #contact-container {
+    min-height:50vh;
+    margin-top:5vh;
+  }
+
+  #contact-field, #contact-img-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+  #contact-container {
+    min-height:40vh;
+    margin-top:15vh;
+  }
+
+  #contact-field {
+    border-right:1px solid black;
+  }
+
+}
+
+/* ADMIN LOGIN PAGE */
+
+@media only screen and (max-width: 869px) {
+
+  #admin-header {
+    background-image: url(asset-path("transition08.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 870px) {
+
+  #admin-header {
+    background-image: url(asset-path("transition08.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+}
+
+
+
+.header_link_admin {
+  text-decoration: none;
+  color:#fff;
+}
+
+.header_link_admin:hover {
+  color:#fff;
+}
+
+/* DASHBOARD */
+
+#dashcontent {
+  display:inline-block;
+}
+
+h3 {
+  font-family: 'PT Serif', serif;
+}
+
+.header_link_dashboard {
+  text-decoration: none;
+  color:#fff;
+}
+
+.header_link_dashboard:hover {
+  color:#fff;
+}
+
+.publication_thumbnail_dashboard {
+  max-height: 125px;
+  max-width: 125px;
+}
+
+.publication_title_dashboard {
+  padding-right:150px;
+}
+
+@media only screen and (max-width: 869px) {
+
+  #dashboard-header {
+    background-image: url(asset-path("transition01.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 870px) {
+
+  #dashboard-header {
+    background-image: url(asset-path("transition01.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+}
+
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  display:inline-block;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* DASHBOARD MENU */
+
+#dash-button {
+  display:flex;
+  justify-content:center;
+}
+

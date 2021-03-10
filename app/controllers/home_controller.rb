@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   def dashboard
     @projects = Project.all
     @publications = Publication.all
+
   end
 
   def admin

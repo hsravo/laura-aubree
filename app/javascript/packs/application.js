@@ -16,5 +16,10 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
+require ("@rails/ujs").start()
 require("trix")
 require("@rails/actiontext")
+require("./baguetteBox.min.js")
+require("./nav.js")
+
+console.log("custom js file loaded");

@@ -1,3 +1,247 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+#project-column {
+  position: relative;
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+#project-column img {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  vertical-align: middle;
+    &:hover {
+    opacity: 0.5;
+    transition:0.5s;
+  }
+}
+
+
+h1 {
+  font-family: 'PT Serif', serif;
+}
+
+
+#desktop-title {
+  color:#212529;
+  font-style: bold;
+  padding-top: 32px;
+}
+
+#proj-menu {
+  padding-left: 80px;
+}
+
+#main-title {
+  display:flex;
+  justify-content:center;
+}
+
+.project-cover {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.text {
+  color: #212529;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+  #project-column {
+    flex: 50%;
+    max-width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 750px) {
+  #project-column {
+    flex: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  #proj-menu {
+    min-height:45vh;
+  }
+
+}
+
+@media (max-width: 1199px) {
+
+  #proj-menu {
+    padding-left: 75px;
+    min-height:45vh;
+  }
+
+}
+
+@media (max-width: 999px) {
+
+  #proj-menu {
+    padding-left: 50px;
+  }
+
+}
+
+@media (min-width: 750px) and (max-width: 870px) {
+
+  #proj-menu {
+    padding-left: 25px;
+  }
+
+}
+
+@media (min-width: 730px) and (max-width: 750px) {
+
+  #proj-menu {
+    padding-left: 10px;
+  }
+
+}
+
+@media (max-width: 730px) {
+
+  #proj-menu {
+    padding-left: 3px;
+  }
+
+}
+
+footer {
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: normal;
+  color: #212529;
+  padding: 240px 0 60px;
+  bottom: 0;
+  display:flex;
+  justify-content: center;
+  font-family: 'PT Serif', serif;
+}
+
+/* PROJECTS SHOW STYLES */
+
+#project-index {
+  font-family: 'PT Serif', serif;
+  font-size: 32px;
+  font-style: bold;
+  padding-top: 32px;
+  color:#888a8c;
+  transition:0.3s;
+  text-decoration: none;
+    &:hover {
+  color:#212529;
+  }
+}
+
+#proj-text {
+  text-align:justify;
+  font-size:18px;
+  #en-text {
+    font-style: oblique 10deg;
+  }
+}
+
+
+
+#gallery-container {
+  margin: 0 auto;
+}
+
+#project-img-column a {
+  text-decoration: none;
+}
+
+#project-img-column img:hover {
+  opacity: 0.5;
+}
+
+@media (min-width: 1000px) {
+
+  #project-presentation {
+    display:flex;
+    flex-direction: row;
+    min-height:60vh;
+    margin-top:10vh;
+  }
+
+  #proj-text {
+    padding-right:1em;
+    border-right:1px solid black;
+  }
+
+  #gallery-container {
+    padding-left:2em;
+    margin-top:1vh;
+  }
+
+  #project-img-column img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    padding:1px;
+    margin:auto;
+    vertical-align: middle;
+    transition: 0.3s;
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  #main-title {
+    margin-top:2em;
+  }
+
+  #project-presentation {
+    display:flex;
+    flex-direction: column;
+    margin-top:2em;
+  }
+
+  .col {
+    flex: 0 0 80%;
+    width: 100% !important;
+  }
+
+  #project-img-column {
+    position: relative;
+    flex: 100%;
+    max-width: 100%;
+    margin-top:1em;
+  }
+
+  #project-img-column img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    padding:8px;
+    margin:auto;
+    vertical-align: middle;
+    transition: 0.3s;
+  }
+}

@@ -9,8 +9,8 @@ Rails.application.routes.draw do
 
   scope module: 'admin' do #under admin scope without admin prefix
     resources :projects
-    #   get '/projects/:slug', to: 'projects#show'
-    #   get '/projects/:slug', to: 'projects#edit'
+      get '/projects/:slug', to: 'projects#show'
+      get '/projects/:slug', to: 'projects#edit'
     resources :publications
   end
 
