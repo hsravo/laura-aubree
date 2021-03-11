@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row" id="project-presentation">
       <div class="col" id="proj-text">
-        <div><h3><%= @project.title %></h3></div></br>
+        <div id="title-text"><h3><%= @project.title %></h3></div></br>
         <div id="fr-text"><%= @project.body_fr %></div></br>
         <div id="en-text"><%= @project.body_en %></div>
       </div>
@@ -27,16 +27,3 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-  <script>
-    window.onload = function() {
-      baguetteBox.run('.imgSlider', {
-        animation: 'fadeIn',
-        noScrollbars: true
-      });
-    };
-  </script>

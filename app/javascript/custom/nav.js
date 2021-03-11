@@ -1,4 +1,4 @@
-console.log("custom js file loaded");
+console.log("nav js file loaded");
 
 // NAVBAR + FOOTER + LOADER
 
@@ -55,3 +55,4 @@ $(function() {
 $(function() {
   $('.profile-img').hide().delay(1000).fadeIn(1000);
 });
+

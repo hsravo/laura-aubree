@@ -417,7 +417,7 @@ h1 {
 @media only screen and (max-width: 869px) {
 
   #admin-header {
-    background-image: url(asset-path("transition08.jpg"));
+    background-image: url("/images/transition08.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -434,7 +434,7 @@ h1 {
 @media only screen and (min-width: 870px) {
 
   #admin-header {
-    background-image: url(asset-path("transition08.jpg"));
+    background-image: url("/images/transition08.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -490,7 +490,7 @@ h3 {
 @media only screen and (max-width: 869px) {
 
   #dashboard-header {
-    background-image: url(asset-path("transition01.jpg"));
+    background-image: url("/images/transition01.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -507,7 +507,7 @@ h3 {
 @media only screen and (min-width: 870px) {
 
   #dashboard-header {
-    background-image: url(asset-path("transition01.jpg"));
+    background-image: url("/images/transition01.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;

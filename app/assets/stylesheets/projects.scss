@@ -161,6 +161,13 @@ footer {
 #proj-text {
   text-align:justify;
   font-size:18px;
+  a {
+    color:#212529;
+    text-decoration:underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   #en-text {
     font-style: oblique 10deg;
   }
@@ -221,6 +228,15 @@ footer {
     display:flex;
     flex-direction: column;
     margin-top:2em;
+  }
+
+  #proj-text {
+    #title-text {
+      display:none;
+    }
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   .col {

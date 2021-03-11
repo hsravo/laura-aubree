@@ -1,2 +1,31 @@
-<h1>Home#admin</h1>
-<p>Find me in app/views/home/admin.html.erb</p>
+<% if user_signed_in? %>
+  <ul>
+    <li>
+      <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+    </li>
+
+    <li>
+      Utilisateur : <%= current_user.email %>
+    </li>
+  </ul>
+
+<% else %>
+
+  <header id="admin-header">
+
+    <h1>Admin</h1>
+
+    <ul style="display:inline">
+      <li>    
+        <%= link_to "Se connecter", new_user_session_path, class: "header_link_admin" %>
+      </li>
+
+      <li>
+        <%= link_to "Créer compte", new_user_registration_path, class: "header_link_admin" %>
+      </li>
+      </ul>
+    </ul>
+
+  </header>
+
+<% end %>

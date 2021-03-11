@@ -3,23 +3,22 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-//= require jquery
-//= require rails-ujs
 //= require popper
+//= require turbolinks
 //= require bootstrap
 //= require activestorage
 
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import baguetteBox from 'baguettebox.js';
 
 Rails.start()
 ActiveStorage.start()
 
-require ("@rails/ujs").start()
+require("@rails/ujs")
 require("trix")
 require("@rails/actiontext")
-require("./baguetteBox.min.js")
-require("./nav.js")
-
-console.log("custom js file loaded");
+require("custom/nav")
+require("custom/home")
+require("custom/baguette")
