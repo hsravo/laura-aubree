@@ -176,7 +176,7 @@ footer {
 
 
 #gallery-container {
-  margin: 0 auto;
+  margin: auto 0;
 }
 
 #project-img-column a {
@@ -236,7 +236,10 @@ footer {
     }
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin-bottom:2em;
   }
 
   .col {
