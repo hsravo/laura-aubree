@@ -292,6 +292,11 @@ body {
 @media only screen and (max-width: 990px) {
 
 
+  #about-view {
+    margin-top:5vh;
+  }
+
+
   #description-field ul {
     margin-right: 41px;
     margin-bottom:-90px;
@@ -381,6 +386,13 @@ h1 {
 
 #contact-icons {
   font-size: 32px;
+}
+
+#contact-img-field {
+  &:hover {
+    opacity:0.7;
+    transition:0.3s;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
