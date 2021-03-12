@@ -445,17 +445,20 @@ h1 {
 
 @media only screen and (min-width: 870px) {
 
-  #admin-header {
-    background-image: url("/images/transition08.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding-top: 10px;
-    margin-top: 20px;
-    margin-left: 140px;
-    margin-right: 140px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
+  #admin-container {
+    min-height:55vh;
+    #admin-header {
+      background-image: url("/images/transition08.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding-top: 10px;
+      margin-top: 20px;
+      margin-left: 140px;
+      margin-right: 140px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+    }
   }
 
 }
