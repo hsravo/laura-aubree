@@ -1,4 +1,4 @@
-Complete portfolio project made for photographer Laura Aubrée camera notebook
+Complete portfolio project made for photographer Laura Aubrée :camera: :notebook:
 
 You can visit the website and appreciate her work on https://laura-aubree.fr/.
 
