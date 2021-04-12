@@ -13,6 +13,10 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem "rubycritic", require: false
 gem "aws-sdk-s3", require: false
 
+
+gem 'shrine', '~> 3.3'
+gem 'image_processing', '~> 1.12', '>= 1.12.1'
+
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 

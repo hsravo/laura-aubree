@@ -108,6 +108,7 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.1.8)
+    content_disposition (1.0.0)
     crass (1.0.6)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -123,6 +124,8 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    down (5.2.0)
+      addressable (~> 2.5)
     equalizer (0.0.11)
     erubi (1.10.0)
     erubis (2.7.0)
@@ -164,6 +167,9 @@ GEM
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
+    image_processing (1.12.1)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jmespath (1.4.0)
@@ -284,6 +290,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
+    ruby-vips (2.1.0)
+      ffi (~> 1.12)
     ruby_parser (3.15.1)
       sexp_processor (~> 4.9)
     rubycritic (4.6.0)
@@ -314,6 +322,9 @@ GEM
     semantic_range (3.0.0)
     sexp_processor (4.15.2)
     shellany (0.0.1)
+    shrine (3.3.0)
+      content_disposition (~> 1.0)
+      down (~> 5.1)
     simplecov (0.20.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -377,6 +388,7 @@ DEPENDENCIES
   factory_bot_rails
   friendly_id
   guard-rspec
+  image_processing (~> 1.12, >= 1.12.1)
   jbuilder (~> 2.7)
   jquery-rails
   letter_opener
@@ -391,6 +403,7 @@ DEPENDENCIES
   rubycritic
   sass-rails (>= 6)
   selenium-webdriver
+  shrine (~> 3.3)
   spring
   table_print
   tzinfo-data
