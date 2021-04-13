@@ -14,6 +14,14 @@ class Project < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  def cover_thumbnail
+    return self.cover.variant(resize: '300x300!').processed
+  end
+
+  def images_thumbnail input
+    return self.images[input].variant(resize: '150x150!')
+  end
+
   private
 
   def images_presence_format

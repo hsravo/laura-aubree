@@ -7,7 +7,7 @@
       <% @projects.each do |project| %>
         <div class="column" id="project-column">
           <%= link_to project do %>
-            <% image_tag(project.cover, :class => "project-cover") %>  
+            <% image_tag(project.cover_thumbnail, :class => "project-cover") %>  
           <% end %>
         </div>
       <% end %>

@@ -19,7 +19,7 @@
           <% (0...@project.images.count).each do |image| %>
           <div class="imgSlider gallery" id="project-img-column">
             <%= link_to @project.images[image] do %>
-            <%= image_tag(@project.images[image]) %>
+            <%= image_tag(@project.images_thumbnail(image)) %>
             <% end %>
           </div>
           <% end %>
